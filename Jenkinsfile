@@ -11,7 +11,7 @@ pipeline {
 	            steps { 
 	                echo 'Building the application....'
 					echo "building version ${NEW_VERSION}"
-					mvn clean install
+					sh mvn clean install
 	            }
 	        }
 	        stage('Test'){
