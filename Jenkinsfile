@@ -1,9 +1,17 @@
 pipeline {
 	agent any
+	environment{
+		NEW_VERSION = '1.2.0'
+	}
+	tools{
+		maven 'M22'
+	}
 	stages {
 	        stage('Build') { 
 	            steps { 
 	                echo 'Building the application....'
+					echo "building version ${NEW_VERSION}"
+					mvn clean install
 	            }
 	        }
 	        stage('Test'){
