@@ -1,3 +1,4 @@
+#https://www.youtube.com/watch?v=PKcGy9oPVXg
 FROM openjdk:8
 EXPOSE 9090
 ADD target/devops-integration.jar devops-integration.jar
