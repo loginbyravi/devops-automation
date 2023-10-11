@@ -10,8 +10,13 @@ pipeline {
 		stage('Build') { 
 			steps { 
 				echo 'Building the application....'
-				echo "building version ${NEW_VERSION}"
+				
 				sh 'mv-n clean install'
+
+				echo "deploying ....."
+				sh 'mvn spring-boot:run'
+				echo "deploying .....22222"
+
 			}
 		}
 		stage('Test'){
